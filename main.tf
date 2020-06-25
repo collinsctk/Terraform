@@ -4,27 +4,15 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "aws_key_pair" "ubuntu" {
-  key_name   = "key"
-  public_key = file("key.pub")
-}
 
-resource "aws_instance" "ubuntu" {
-  key_name      = aws_key_pair.ubuntu.key_name
-  ami           = "ami-03ba3948f6c37a4b0"
+resource "aws_instance" "amazon linux 2" {
+  key_name      = "new-aws"
+  ami           = "ami-01af223aa7f274198"
   instance_type = "t2.micro"
 
   tags = {
-    Name = "ubuntu"
+    Name = "qytang ec2"
   }
-
-  connection {
-    type        = "ssh"
-    user        = "ubuntu"
-    private_key = file("key")
-    host        = self.public_ip
-  }
-
 }
 
 resource "aws_security_group" "allow_tls" {
@@ -49,9 +37,4 @@ resource "aws_security_group" "allow_tls" {
   tags = {
     Name = "allow_all"
   }
-}
-
-resource "aws_eip" "ip" {
-  vpc      = true
-  instance = aws_instance.ubuntu.id
 }
