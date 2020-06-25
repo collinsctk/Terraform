@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 
-resource "aws_instance" "amazon linux 2" {
+resource "aws_instance" "amazon_linux_2" {
   key_name      = "new-aws"
   ami           = "ami-01af223aa7f274198"
   instance_type = "t2.micro"
