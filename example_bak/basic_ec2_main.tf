@@ -10,7 +10,6 @@ resource "aws_instance" "amazon_linux_2" {
   ami           = "ami-01af223aa7f274198"
   instance_type = "t2.micro"
   subnet_id = var.default_subnet
-  iam_instance_profile = "WebService"
   tags = {
     Name = "qytang ec2"
   }
