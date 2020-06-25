@@ -14,4 +14,5 @@ resource "aws_instance" "amazon_linux_2" {
   tags = {
     Name = "qytang ec2"
   }
+  user_data = file("user_data.sh")
 }
