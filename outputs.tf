@@ -1,3 +1,4 @@
-output "tfc_example_table_arn" {
-  value = aws_dynamodb_table.tfc_example_table.arn
+output "id" {
+  description = "List of IDs of instances"
+  value       = aws_instance.this.*.id
 }
