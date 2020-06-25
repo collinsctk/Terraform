@@ -12,7 +12,6 @@ resource "aws_vpc" "qyt_aws_vpc" {
   }
 }
 
-
 resource "aws_subnet" "qyt_outside_subnet" {
   vpc_id = aws_vpc.qyt_aws_vpc.id
   cidr_block = "10.0.1.0/24"
