@@ -27,7 +27,7 @@ pip3 install flask
 pip3 install requests
 
 # 使用python脚本创建数据库表
-python3 /aws_flask/insert_db_1_create_table.py
+#python3 /aws_flask/insert_db_1_create_table.py
 # 使用python脚本向数据库接入数据
 python3 /aws_flask/insert_db_2_insert.py
 # 使用python脚本上传静态文件(图片)到webapp-aws[名字有严格要求,需要提前创建]的s3存储

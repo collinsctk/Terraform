@@ -4,6 +4,29 @@ provider "aws" {
   region = var.aws_region
 }
 
+resource "aws_dynamodb_table" "dynamodb_table" {
+  name = "staff"
+
+  read_capacity  = var.db_read_capacity
+  write_capacity = var.db_write_capacity
+  hash_key       = "username"
+  range_key      = "phone"
+
+  attribute {
+    name = "username"
+    type = "S"
+  }
+
+  attribute {
+    name = "phone"
+    type = "S"
+  }
+
+  tags = {
+    Name = "staff"
+  }
+}
+
 resource "aws_security_group" "allow_ssh_web" {
   name        = "allow_ssh_web"
   description = "Allow ssh and web inbound traffic"
