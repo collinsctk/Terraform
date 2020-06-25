@@ -20,5 +20,5 @@ variable "db_write_capacity" {
 
 variable "tag_user_name" {
   type = string
-  default = 'db_tag'
+  default = "db_tag"
 }
