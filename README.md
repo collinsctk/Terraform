@@ -1,3 +1,3 @@
-# Terraform Cloud Getting Started Guide Example
+# 乾颐堂现任明教教主 教主技术进化论2020 18期Terraform Cloud实战
 
-This is an example Terraform configuration intended for use with the Terraform Cloud Getting Started Guide hosted at https://learn.hashicorp.com/terraform/cloud-gettingstarted/tfc_overview
+欢迎访问乾颐堂官方网站http://www.qytang.com获取更多信息
