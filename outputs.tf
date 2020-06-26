@@ -1,11 +1,11 @@
-output "instance_ip_addr" {
-  value = aws_instance.amazon_linux_2.private_ip
+output "vpc_id" {
+  value = aws_vpc.qyt_aws_vpc.id
 }
 
-output "instance_public_ip_addr" {
-  value = aws_instance.amazon_linux_2.public_ip
+output "vpc_arn" {
+  value = aws_vpc.qyt_aws_vpc.arn
 }
 
-output "instance_public_sg" {
-  value = aws_instance.amazon_linux_2.security_groups
+output "vpc_cidr" {
+  value = aws_vpc.qyt_aws_vpc.cidr_block
 }
